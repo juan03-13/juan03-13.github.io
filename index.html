@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      /* Cambiamos el fondo para hacerlo más vibrante, similar a la imagen */
+      /* Fondo cálido para atraer la atención */
       background: linear-gradient(180deg, #ffe0b2 0%, #ffcc80 100%); 
       color: #2b2b2b;
       box-sizing: border-box;
@@ -16,17 +16,16 @@
 
     header {
       text-align: center;
-      padding: 50px 20px 30px; /* Reducimos el padding de abajo */
-      /* Usamos un color de fondo más cálido */
-      background: #ffab40; 
+      padding: 50px 20px 30px; 
+      background: #ffab40; /* Color de encabezado */
       position: relative;
-      color: #3d3d3d; /* Color de texto más oscuro para contraste */
-      border-bottom-left-radius: 20px; /* Borde suave */
+      color: #3d3d3d;
+      border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
     }
 
     header h1 {
-      font-size: 2.5em; /* Título más grande para impactar */
+      font-size: 2.5em; /* Título grande y llamativo */
       font-weight: 700;
       color: #2a2a2a;
       margin-bottom: 20px;
@@ -34,11 +33,10 @@
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
     
-    /* Nueva sección para contener la imagen y la info principal */
     .hero-section {
         text-align: center;
         padding: 0 20px 30px;
-        background: #ffab40; /* Mismo color que el header para continuidad */
+        background: #ffab40; 
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         position: relative;
@@ -47,37 +45,38 @@
 
     /* ESTILO CLAVE: Imagen GRANDE del producto */
     .hero-product img {
-        width: 90%; /* Ocupa casi todo el ancho */
-        max-width: 300px; /* Límite para pantallas grandes */
+        width: 90%; 
+        max-width: 300px; 
         height: auto;
         margin: 0 auto 20px;
         display: block;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
-        transform: translateY(0); /* Evita que la imagen se mueva */
-        transition: none; /* Desactivamos el hover para el foco */
     }
 
-    /* Estilos para el texto bajo la imagen */
     .hero-info {
-        color: #fff;
+        color: #3d3d3d;
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para el texto */
+        padding: 10px;
+        border-radius: 10px;
         font-weight: 600;
         font-size: 1.1em;
         margin-bottom: 20px;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        display: inline-block;
+        max-width: 90%;
     }
     
     .btn-whatsapp {
       display: inline-block;
-      background-color: #ff5722; /* Color de botón más llamativo */
+      background-color: #ff5722; /* Color de botón principal: Naranja/Rojo */
       color: #fff;
       padding: 15px 35px;
       border-radius: 40px;
       font-weight: bold;
       text-decoration: none;
-      font-size: 1.2em; /* Botón más grande */
+      font-size: 1.2em;
       transition: transform 0.3s ease, background 0.3s ease;
-      margin-top: 15px; /* Espacio */
+      margin-top: 15px; 
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
@@ -86,13 +85,14 @@
       transform: scale(1.05);
     }
 
-    /* Estilo para el video: lo hacemos pequeño y con bordes */
+    /* Video: pequeño y discreto */
     .video-section {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 30px 20px; /* Espaciado */
-      background-color: #fff8e1; /* Fondo suave */
+      padding: 30px 20px; 
+      background-color: #fff8e1; 
     }
 
     .video-section video {
@@ -100,13 +100,8 @@
       width: 320px; /* Tamaño máximo más pequeño */
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      border: 4px solid #fff; /* Borde de marco */
+      border: 4px solid #fff; 
     }
-    
-    /* Eliminamos la sección 'producto' repetida y sus estilos */
-    .producto { display: none; } 
-    /* Si quieres reutilizarla, deberías darle estilos diferentes a 'hero-product' */
-
 
     .beneficios {
       background-color: #ffffff;
@@ -118,23 +113,23 @@
     .beneficios h2 {
         font-size: 2em;
         margin-bottom: 30px;
-        color: #ff5722; /* Título de la lista con el color del botón */
+        color: #ff5722; /* Título que hace juego con el botón */
     }
 
     .beneficios ul {
       list-style: none;
       padding: 0;
-      max-width: 450px; /* Hacemos la lista más estrecha, como en el ejemplo */
+      max-width: 450px; 
       margin: auto;
       text-align: left;
     }
 
     .beneficios li {
       margin-bottom: 20px;
-      font-size: 1.2em; /* Un poco más grande para leer fácil */
+      font-size: 1.2em; 
       position: relative;
-      padding-left: 35px; /* Más espacio para el checkmark */
-      border-bottom: 1px dashed #eee; /* Separador sutil */
+      padding-left: 35px;
+      border-bottom: 1px dashed #eee; 
       padding-bottom: 10px;
       font-weight: 500;
     }
@@ -146,14 +141,13 @@
 
     .beneficios li::before {
       content: "✓";
-      color: #ff5722; /* Color de checkmark más llamativo */
+      color: #ff5722; /* Checkmark llamativo */
       font-weight: bold;
       position: absolute;
       left: 0;
       font-size: 1.4em;
     }
     
-    /* Sección de Testimonio (Inspirado en la segunda imagen) */
     .testimonio-section {
         background-color: #ffab40;
         color: #3d3d3d;
@@ -179,7 +173,7 @@
     
     footer .btn-whatsapp {
       margin-bottom: 30px;
-      background-color: #4CAF50; /* Un color diferente para el botón de abajo */
+      background-color: #4CAF50; /* Botón de cierre en verde */
     }
 
     footer .btn-whatsapp:hover {
@@ -202,10 +196,10 @@
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2em; /* Ajuste para móviles */
+        font-size: 2em; 
       }
       .hero-product img {
-        width: 95%; /* Máximo ancho en móvil */
+        width: 95%; 
         max-width: 320px;
       }
       .hero-info {
@@ -241,12 +235,13 @@
 
     <section class="video-section">
         <p style="font-size: 1.1em; font-weight: 600; color: #3d3d3d; text-align: center; margin-bottom: 15px;">Mira el video y conoce su poder</p>
-    <video controls>       <source src="video-tonico.mp4" type="video/mp4">
+    <video controls> 
+      <source src="video-tonico.mp4" type="video/mp4">
       Tu navegador no soporta este formato de video.
     </video>
   </section>
-
-    <section class="beneficios">
+    
+        <section class="beneficios">
     <h2>¿Qué vas a notar con Essentúa?</h2>
     <ul>
       <li>**Cabello más grueso**, fuerte y brillante</li>
