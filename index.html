@@ -1,66 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Essentúa - Tónico Natural para Cabello y Barba</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essentúa - Tónico Natural Capilar</title>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #f5e8d0 0%, #fff 100%);
-      color: #222;
+      background: linear-gradient(180deg, #f8f5f0 0%, #f3e8db 100%);
+      color: #2b2b2b;
     }
 
     header {
-      background: linear-gradient(120deg, #3a5a40, #a3b18a);
-      color: white;
       text-align: center;
-      padding: 60px 20px 80px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
+      padding: 70px 20px 50px;
+      background: linear-gradient(135deg, #f1e0c6, #e2d0aa);
     }
 
     header h1 {
-      font-size: 2.2em;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.1em;
-      margin-bottom: 25px;
+      font-size: 2em;
+      font-weight: 600;
+      color: #2a2a2a;
+      margin-bottom: 20px;
     }
 
     .btn-whatsapp {
-      background: #25d366;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
+      display: inline-block;
+      background-color: #2b7a0b;
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 40px;
       font-weight: bold;
-      transition: 0.3s;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .btn-whatsapp:hover {
-      background: #1da955;
+      background-color: #1e5808;
+      transform: scale(1.05);
     }
 
     .producto {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
-      margin: 60px auto;
-      max-width: 1000px;
+      justify-content: center;
       gap: 40px;
-      padding: 0 20px;
+      padding: 60px 20px;
     }
 
     .producto img {
-      width: 300px;
+      width: 280px;
       border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
     .texto {
@@ -68,80 +62,81 @@
     }
 
     .texto h2 {
-      color: #3a5a40;
-      font-size: 1.8em;
+      font-size: 1.6em;
       margin-bottom: 10px;
+      color: #2b2b2b;
     }
 
     .texto p {
-      font-size: 1.05em;
-      margin-bottom: 15px;
+      font-size: 1em;
+      color: #444;
     }
 
     .precio {
-      background: #3a5a40;
-      color: white;
-      display: inline-block;
-      padding: 10px 25px;
-      border-radius: 25px;
-      font-size: 1.2em;
-      margin-top: 10px;
+      font-weight: 700;
+      font-size: 1.6em;
+      margin-top: 15px;
+      color: #2b7a0b;
+    }
+
+    .envio {
+      color: #c79229;
+      font-weight: 600;
+      margin-top: 5px;
     }
 
     .beneficios {
-      text-align: center;
-      background: #fff8ef;
+      background-color: #ffffff;
       padding: 50px 20px;
+      text-align: center;
     }
 
     .beneficios h2 {
-      color: #3a5a40;
-      margin-bottom: 25px;
       font-size: 1.8em;
+      margin-bottom: 20px;
     }
 
     .beneficios ul {
       list-style: none;
       padding: 0;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       text-align: left;
     }
 
     .beneficios li {
-      margin: 12px 0;
-      font-size: 1.05em;
-      padding-left: 25px;
+      margin-bottom: 10px;
+      font-size: 1.1em;
       position: relative;
+      padding-left: 25px;
     }
 
     .beneficios li::before {
-      content: "✔";
-      color: #3a5a40;
+      content: "✓";
+      color: #2b7a0b;
+      font-weight: bold;
       position: absolute;
       left: 0;
-      top: 0;
     }
 
     footer {
-      background: #3a5a40;
-      color: white;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
+      padding: 40px 20px;
+      background-color: #2b2b2b;
+      color: #f1f1f1;
     }
 
-    footer a {
-      color: #fff;
-      text-decoration: underline;
+    footer p {
+      font-size: 0.9em;
+      color: #d4d4d4;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
       .producto {
         flex-direction: column;
       }
-      .producto img {
-        width: 80%;
+      header h1 {
+        font-size: 1.5em;
       }
     }
   </style>
@@ -149,43 +144,44 @@
 <body>
 
   <header>
-    <h1>Revive la fuerza y brillo natural de tu cabello</h1>
-    <p>El tónico 100% natural que estimula el crecimiento y fortalece desde la raíz.</p>
-    <a href="https://wa.me/573133234154?text=Hola%20quiero%20pedir%20el%20tónico%20Essentúa" class="btn-whatsapp" target="_blank">Haz tu pedido ahora</a>
+    <h1>Con el poder de la fuerza ancestral<br>¡Llegó el momento de tener el cabello que tanto sueñas!</h1>
+    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
+       target="_blank" class="btn-whatsapp">Haz tu pedido ahora</a>
   </header>
 
   <section class="producto">
     <img src="https://raw.githubusercontent.com/juan03-13/juan03-13.github.io/main/producto.jpg" alt="Tónico Essentúa">
     <div class="texto">
-      <h2>Essentúa Tónico Capilar y para Barba</h2>
-      <p>Hecho con extractos naturales que fortalecen el folículo, previenen la caída y estimulan el crecimiento del cabello y barba.</p>
-      <p>Resultados visibles desde los <strong>15 a 20 días</strong> de uso constante.</p>
-      <span class="precio">$25.000</span>
+      <h2>Tónico capilar y para barba 100% natural</h2>
+      <p>Fortalece, revitaliza y estimula el crecimiento del cabello y la barba desde la raíz. Su fórmula ancestral nutre profundamente sin dejar residuos grasos.</p>
+      <p class="precio">$30.000 COP</p>
+      <p class="envio">🚚 Envío GRATIS a todo el país</p>
+    </div>
+  </section>
+
+  <section class="producto" style="background-color:#f9f5ef;">
+    <img src="https://raw.githubusercontent.com/juan03-13/juan03-13.github.io/main/empaque.jpg" alt="Empaque Essentúa">
+    <div class="texto">
+      <h2>Cada detalle cuenta</h2>
+      <p>Tu tónico llega cuidadosamente empacado, listo para devolverte la vitalidad que tu cabello merece. Inspirado en la naturaleza, hecho con amor y compromiso.</p>
     </div>
   </section>
 
   <section class="beneficios">
-    <h2>Beneficios principales</h2>
+    <h2>✨ Beneficios principales</h2>
     <ul>
-      <li>Estimula el crecimiento capilar y de la barba.</li>
-      <li>Previene la caída del cabello desde la raíz.</li>
-      <li>Fortalece, hidrata y da brillo natural.</li>
-      <li>Fórmula natural libre de químicos agresivos.</li>
-      <li>Resultados visibles y comprobados.</li>
+      <li>Previene la caída del cabello</li>
+      <li>Activa el crecimiento natural</li>
+      <li>Fortalece desde la raíz</li>
+      <li>Da brillo y suavidad</li>
+      <li>Ideal para cabello y barba</li>
     </ul>
   </section>
 
-  <section class="producto">
-    <img src="https://raw.githubusercontent.com/juan03-13/juan03-13.github.io/main/empaque.jpg" alt="Empaque Essentúa">
-    <div class="texto">
-      <h2>Cada detalle importa</h2>
-      <p>Tu tónico llega cuidadosamente empacado, garantizando pureza, calidad y elegancia desde el primer momento.</p>
-      <a href="https://wa.me/573133234154?text=Quiero%20comprar%20Essentúa" class="btn-whatsapp">Comprar por WhatsApp</a>
-    </div>
-  </section>
-
   <footer>
-    <p>Essentúa © 2025 | Cuidado natural para tu cabello y barba | <a href="https://wa.me/573133234154">Contáctanos</a></p>
+    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
+       target="_blank" class="btn-whatsapp">Pedir por WhatsApp</a>
+    <p>Essentúa © 2025 - Producto 100% natural para tu cabello y barba</p>
   </footer>
 
 </body>
