@@ -3,92 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Essentúa - Revive tu cabello naturalmente</title>
+  <title>Essentúa - Tónico Natural para Cabello y Barba</title>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #f3e8db;
-      color: #2e2e2e;
-      line-height: 1.6;
+      background: linear-gradient(180deg, #f5e8d0 0%, #fff 100%);
+      color: #222;
     }
 
     header {
+      background: linear-gradient(120deg, #3a5a40, #a3b18a);
+      color: white;
       text-align: center;
-      padding: 60px 20px 20px;
+      padding: 60px 20px 80px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
     }
 
     header h1 {
-      font-size: 2.4em;
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
     }
 
     .btn-whatsapp {
-      display: inline-block;
-      background-color: #2b7a0b;
-      color: #fff;
-      padding: 15px 25px;
+      background: #25d366;
+      color: white;
+      padding: 15px 30px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: 0.3s;
     }
 
     .btn-whatsapp:hover {
-      background-color: #1f5c08;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      background: #1da955;
     }
 
     .producto {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: center;
-      gap: 30px;
+      align-items: center;
+      margin: 60px auto;
+      max-width: 1000px;
+      gap: 40px;
+      padding: 0 20px;
     }
 
     .producto img {
-      width: 260px;
-      border-radius: 10px;
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
 
     .texto {
-      max-width: 400px;
+      max-width: 420px;
     }
 
     .texto h2 {
-      font-size: 1.4em;
+      color: #3a5a40;
+      font-size: 1.8em;
       margin-bottom: 10px;
     }
 
+    .texto p {
+      font-size: 1.05em;
+      margin-bottom: 15px;
+    }
+
     .precio {
-      font-weight: bold;
+      background: #3a5a40;
+      color: white;
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 25px;
       font-size: 1.2em;
       margin-top: 10px;
     }
 
-    footer {
+    .beneficios {
       text-align: center;
-      padding: 40px 20px;
+      background: #fff8ef;
+      padding: 50px 20px;
     }
 
-    footer p {
-      font-size: 1em;
-      color: #444;
+    .beneficios h2 {
+      color: #3a5a40;
+      margin-bottom: 25px;
+      font-size: 1.8em;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8em;
-      }
+    .beneficios ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .beneficios li {
+      margin: 12px 0;
+      font-size: 1.05em;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .beneficios li::before {
+      content: "✔";
+      color: #3a5a40;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    footer {
+      background: #3a5a40;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
       .producto {
         flex-direction: column;
+      }
+      .producto img {
+        width: 80%;
       }
     }
   </style>
@@ -96,34 +149,43 @@
 <body>
 
   <header>
-    <h1>Revive esa esencia de tu cabello,<br>dále nueva vida.</h1>
-    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
-       target="_blank" class="btn-whatsapp">Haz tu pedido por WhatsApp</a>
+    <h1>Revive la fuerza y brillo natural de tu cabello</h1>
+    <p>El tónico 100% natural que estimula el crecimiento y fortalece desde la raíz.</p>
+    <a href="https://wa.me/573133234154?text=Hola%20quiero%20pedir%20el%20tónico%20Essentúa" class="btn-whatsapp" target="_blank">Haz tu pedido ahora</a>
   </header>
 
   <section class="producto">
     <img src="https://raw.githubusercontent.com/juan03-13/juan03-13.github.io/main/producto.jpg" alt="Tónico Essentúa">
     <div class="texto">
-      <h2>Tónico capilar y para barba 100% natural.</h2>
-      <p>Resultados visibles desde los 15 a 20 días de uso constante.<br>
-         Ideal para fortalecer, estimular el crecimiento y revitalizar el cabello y la barba.</p>
-      <p class="precio">$25.000</p>
+      <h2>Essentúa Tónico Capilar y para Barba</h2>
+      <p>Hecho con extractos naturales que fortalecen el folículo, previenen la caída y estimulan el crecimiento del cabello y barba.</p>
+      <p>Resultados visibles desde los <strong>15 a 20 días</strong> de uso constante.</p>
+      <span class="precio">$25.000</span>
     </div>
+  </section>
+
+  <section class="beneficios">
+    <h2>Beneficios principales</h2>
+    <ul>
+      <li>Estimula el crecimiento capilar y de la barba.</li>
+      <li>Previene la caída del cabello desde la raíz.</li>
+      <li>Fortalece, hidrata y da brillo natural.</li>
+      <li>Fórmula natural libre de químicos agresivos.</li>
+      <li>Resultados visibles y comprobados.</li>
+    </ul>
   </section>
 
   <section class="producto">
     <img src="https://raw.githubusercontent.com/juan03-13/juan03-13.github.io/main/empaque.jpg" alt="Empaque Essentúa">
     <div class="texto">
-      <h2>Cada detalle cuenta</h2>
-      <p>Tu tónico llega cuidadosamente empacado, listo para revivir tu cabello desde la raíz. 
-         Hecho con ingredientes naturales, pensado para tu bienestar.</p>
+      <h2>Cada detalle importa</h2>
+      <p>Tu tónico llega cuidadosamente empacado, garantizando pureza, calidad y elegancia desde el primer momento.</p>
+      <a href="https://wa.me/573133234154?text=Quiero%20comprar%20Essentúa" class="btn-whatsapp">Comprar por WhatsApp</a>
     </div>
   </section>
 
   <footer>
-    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
-       target="_blank" class="btn-whatsapp">Haz tu pedido ahora</a>
-    <p>Essentúa © 2025 - Producto 100% natural para tu cabello y barba</p>
+    <p>Essentúa © 2025 | Cuidado natural para tu cabello y barba | <a href="https://wa.me/573133234154">Contáctanos</a></p>
   </footer>
 
 </body>
