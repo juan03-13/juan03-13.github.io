@@ -45,6 +45,22 @@
       transform: scale(1.05);
     }
 
+    /* Estilo para el video */
+    .video-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    .video-section video {
+      max-width: 100%;
+      width: 80%;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
     .producto {
       display: flex;
       flex-wrap: wrap;
@@ -182,8 +198,16 @@
        target="_blank" class="btn-whatsapp">¡Haz tu pedido en WhatsApp!</a>
   </header>
 
+  <!-- Sección para el video -->
+  <section class="video-section">
+    <video autoplay loop muted>
+      <source src="video-tonico.gif" type="video/gif">
+      Tu navegador no soporta este formato de video.
+    </video>
+  </section>
+
   <section class="producto">
-    <img src="https://raw.githubusercontent.com/juan03-13/juan03-13.github.io/main/producto.jpg" alt="Tónico Essentúa">
+    <img src="producto.jpg" alt="Tónico Essentúa">
     <div class="texto">
       <h2>Tónico capilar y para barba 100% natural</h2>
       <p>Fortalece, revitaliza y estimula el crecimiento del cabello y la barba desde la raíz. Su fórmula ancestral nutre profundamente sin dejar residuos grasos.</p>
@@ -193,7 +217,7 @@
   </section>
 
   <section class="producto" style="background-color:#f9f5ef;">
-    <img src="https://raw.githubusercontent.com/juan03-13/juan03-13.github.io/main/empaque.jpg" alt="Empaque Essentúa">
+    <img src="empaque.jpg" alt="Empaque Essentúa">
     <div class="texto">
       <h2>Cada detalle cuenta</h2>
       <p>Tu tónico llega cuidadosamente empacado, listo para devolverte la vitalidad que tu cabello merece. Inspirado en la naturaleza, hecho con amor y compromiso.</p>
