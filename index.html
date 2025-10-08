@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essentúa - Tónico Natural Capilar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      /* Fondo cálido para atraer la atención */
+      background: linear-gradient(180deg, #ffe0b2 0%, #ffcc80 100%); 
+      color: #2b2b2b;
+      box-sizing: border-box;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px; 
+      background: #ffab40; /* Color de encabezado */
+      position: relative;
+      color: #3d3d3d;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em; /* Título grande y llamativo */
+      font-weight: 700;
+      color: #2a2a2a;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hero-section {
+        text-align: center;
+        padding: 0 20px 30px;
+        background: #ffab40; 
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+    /* ESTILO CLAVE: Imagen GRANDE del producto */
+    .hero-product img {
+        width: 90%; 
+        max-width: 300px; 
+        height: auto;
+        margin: 0 auto 20px;
+        display: block;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    .hero-info {
+        color: #3d3d3d;
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para el texto */
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        display: inline-block;
+        max-width: 90%;
+    }
+    
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #ff5722; /* Color de botón principal: Naranja/Rojo */
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: transform 0.3s ease, background 0.3s ease;
+      margin-top: 15px; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #e64a19;
+      transform: scale(1.05);
+    }
+
+    /* Video: pequeño y discreto */
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px; 
+      background-color: #fff8e1; 
+    }
+
+    .video-section video {
+      max-width: 100%;
+      width: 320px; /* Tamaño máximo más pequeño */
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 4px solid #fff; 
+    }
+
+    .beneficios {
+      background-color: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+    
+    .beneficios h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+        color: #ff5722; /* Título que hace juego con el botón */
+    }
+
+    .beneficios ul {
+      list-style: none;
+      padding: 0;
+      max-width: 450px; 
+      margin: auto;
+      text-align: left;
+    }
+
+    .beneficios li {
+      margin-bottom: 20px;
+      font-size: 1.2em; 
+      position: relative;
+      padding-left: 35px;
+      border-bottom: 1px dashed #eee; 
+      padding-bottom: 10px;
+      font-weight: 500;
+    }
+    
+    .beneficios li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .beneficios li::before {
+      content: "✓";
+      color: #ff5722; /* Checkmark llamativo */
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 1.4em;
+    }
+    
+    .testimonio-section {
+        background-color: #ffab40;
+        color: #3d3d3d;
+        padding: 40px 20px;
+        text-align: center;
+        font-style: italic;
+        border-top: 5px solid #ff5722;
+    }
+
+    .testimonio-section p {
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #2b2b2b;
+      color: #f1f1f1;
+    }
+    
+    footer .btn-whatsapp {
+      margin-bottom: 30px;
+      background-color: #4CAF50; /* Botón de cierre en verde */
+    }
+
+    footer .btn-whatsapp:hover {
+      background-color: #45a049;
+    }
+
+    footer p {
+      font-size: 0.9em;
+      color: #d4d4d4;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em; 
+      }
+      .hero-product img {
+        width: 95%; 
+        max-width: 320px;
+      }
+      .hero-info {
+        font-size: 1em;
+      }
+      .beneficios li {
+        font-size: 1.1em;
+      }
+      .testimonio-section p {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¡La Solución que SÍ funciona!</h1>
+    <h1>Tónico Essentúa: Nutrición y Crecimiento Capilar Avanzado</h1>
+  </header>
+    
+    <section class="hero-section">
+        <div class="hero-product">
+            <img src="producto.jpg" alt="Tónico Essentúa Producto Principal">
+        </div>
+        <div class="hero-info">
+            <p><strong>Resultados visibles en pocas semanas.</strong> Fortalece, revitaliza y estimula el crecimiento.</p>
+        </div>
+                <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
+           target="_blank" class="btn-whatsapp">¡PIDE HOY POR $30.000 COP!</a>
+        <p class="envio" style="color: #4d4d4d; font-size: 0.9em; font-weight: 600; margin-top: 10px;">🚚 Envío GRATIS a todo el país</p>
+    </section>
+
+    <section class="video-section">
+        <p style="font-size: 1.1em; font-weight: 600; color: #3d3d3d; text-align: center; margin-bottom: 15px;">Mira el video y conoce su poder</p>
+    <video controls> 
+      <source src="video-tonico.mp4" type="video/mp4">
+      Tu navegador no soporta este formato de video.
+    </video>
+  </section>
+    
+        <section class="beneficios">
+    <h2>¿Qué vas a notar con Essentúa?</h2>
+    <ul>
+      <li>**Cabello más grueso**, fuerte y brillante</li>
+      <li>**Detiene la caída** y previene el quiebre</li>
+      <li>Estimula el **crecimiento** de cabello y barba</li>
+      <li>Fórmula 100% natural sin residuos grasos</li>
+      <li>**Resultados garantizados** desde la raíz</li>
+    </ul>
+  </section>
+    
+    <section class="testimonio-section">
+        <p>"¡Mi cabello era débil y se caía, ahora es fuerte y noté los cambios en un mes!"</p>
+    </section>
+
+  <footer>
+    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
+       target="_blank" class="btn-whatsapp">¡QUIERO MI TÓNICO ESSEMTÚA AHORA!</a>
+    <p>Essentúa © 2025 - Producto 100% natural para tu cabello y barba</p>
+    <p><a href="/privacy-policy">Política de Privacidad</a> | <a href="/terms">Términos y Condiciones</a></p>
+  </footer>
+
+</body>
+</html>
