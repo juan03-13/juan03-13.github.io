@@ -10,19 +10,22 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(180deg, #f8f5f0 0%, #f3e8db 100%);
       color: #2b2b2b;
+      box-sizing: border-box;
     }
 
     header {
       text-align: center;
       padding: 70px 20px 50px;
       background: linear-gradient(135deg, #f1e0c6, #e2d0aa);
+      position: relative;
     }
 
     header h1 {
-      font-size: 2em;
+      font-size: 2.2em;
       font-weight: 600;
       color: #2a2a2a;
       margin-bottom: 20px;
+      line-height: 1.4;
     }
 
     .btn-whatsapp {
@@ -49,27 +52,36 @@
       justify-content: center;
       gap: 40px;
       padding: 60px 20px;
+      transition: all 0.3s ease;
     }
 
     .producto img {
       width: 280px;
+      max-width: 100%;
       border-radius: 20px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .producto img:hover {
+      transform: scale(1.05);
     }
 
     .texto {
       max-width: 420px;
+      text-align: left;
     }
 
     .texto h2 {
-      font-size: 1.6em;
+      font-size: 1.7em;
       margin-bottom: 10px;
       color: #2b2b2b;
     }
 
     .texto p {
-      font-size: 1em;
+      font-size: 1.1em;
       color: #444;
+      line-height: 1.6;
     }
 
     .precio {
@@ -131,12 +143,33 @@
       color: #d4d4d4;
     }
 
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .producto {
         flex-direction: column;
+        gap: 20px;
+        padding: 30px 10px;
       }
       header h1 {
         font-size: 1.5em;
+      }
+      .texto h2 {
+        font-size: 1.4em;
+      }
+      .producto img {
+        width: 100%;
+      }
+      .btn-whatsapp {
+        font-size: 1em;
+        padding: 12px 30px;
       }
     }
   </style>
@@ -146,7 +179,7 @@
   <header>
     <h1>Con el poder de la fuerza ancestral<br>¡Llegó el momento de tener el cabello que tanto sueñas!</h1>
     <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
-       target="_blank" class="btn-whatsapp">Haz tu pedido ahora</a>
+       target="_blank" class="btn-whatsapp">¡Haz tu pedido en WhatsApp!</a>
   </header>
 
   <section class="producto">
@@ -182,6 +215,7 @@
     <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico" 
        target="_blank" class="btn-whatsapp">Pedir por WhatsApp</a>
     <p>Essentúa © 2025 - Producto 100% natural para tu cabello y barba</p>
+    <p><a href="/privacy-policy">Política de Privacidad</a> | <a href="/terms">Términos y Condiciones</a></p>
   </footer>
 
 </body>
