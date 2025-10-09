@@ -24,7 +24,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    header, .hero, .seccion-empaque, .beneficios, footer {
+    header, .hero, .seccion-empaque, .beneficios, .cta-final, footer {
       opacity: 0;
       animation: fadeIn 1.2s ease-in forwards;
     }
@@ -33,7 +33,8 @@
     .hero { animation-delay: 0.5s; }
     .seccion-empaque { animation-delay: 0.8s; }
     .beneficios { animation-delay: 1s; }
-    footer { animation-delay: 1.2s; }
+    .cta-final { animation-delay: 1.1s; }
+    footer { animation-delay: 1.3s; }
 
     header {
       background-color: rgba(0, 0, 0, 0.6);
@@ -177,6 +178,31 @@
       color: #e8d8b8;
     }
 
+    /* --- Botón final --- */
+    .cta-final {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-final a {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .cta-final a:hover {
+      background-color: #1eb85a;
+      transform: scale(1.05);
+    }
+
     footer {
       background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
@@ -191,7 +217,7 @@
       .hero h2 { font-size: 1.3rem; }
       .hero p { font-size: 0.95rem; }
       .precio { font-size: 1rem; padding: 0.5rem 1rem; }
-      .boton-whatsapp { font-size: 1rem; padding: 0.8rem 1.5rem; }
+      .boton-whatsapp, .cta-final a { font-size: 1rem; padding: 0.8rem 1.5rem; }
       .beneficios h2 { font-size: 1.4rem; }
     }
   </style>
@@ -236,6 +262,12 @@
       <li>Repara el daño causado por el sol o productos químicos.</li>
       <li>Devuelve al cabello su aspecto saludable y lleno de vida.</li>
     </ul>
+  </section>
+
+  <section class="cta-final">
+    <a href="https://wa.me/573133234154?text=Hola!%20Quiero%20darle%20nueva%20vida%20a%20mi%20cabello%20con%20el%20tratamiento%20de%20Gu%C3%A1simo" target="_blank">
+      💚 QUIERO DARLE NUEVA VIDA A MI CABELLO
+    </a>
   </section>
 
   <footer>
