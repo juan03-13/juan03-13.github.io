@@ -13,25 +13,66 @@
       box-sizing: border-box;
     }
 
-    /* Encabezado */
+    /* ===== NUEVO HEADER ===== */
     header {
+      position: relative;
       text-align: center;
-      padding: 60px 20px 40px;
-      background: #ffb74d;
-      color: #3d3d3d;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      color: #fff;
+      background: linear-gradient(135deg, #ff9800, #ff7043, #ff5722);
+      padding: 90px 20px 100px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 70%);
+      animation: brillo 10s infinite linear;
+      z-index: 1;
+    }
+
+    @keyframes brillo {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
     }
 
     header h1 {
-      font-size: 2.4em;
-      font-weight: 700;
-      color: #2a2a2a;
-      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+      font-size: 3em;
+      margin-bottom: 15px;
+      font-weight: 800;
+      text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+      animation: fadeInDown 1.2s ease-out forwards;
     }
 
-    /* Sección principal */
+    header h2 {
+      position: relative;
+      z-index: 2;
+      font-size: 1.4em;
+      font-weight: 500;
+      color: #fffde7;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SECCIONES RESTANTES ===== */
     .hero-section {
       text-align: center;
       padding: 40px 20px;
@@ -58,7 +99,6 @@
       max-width: 85%;
     }
 
-    /* Botón */
     .btn-whatsapp {
       display: inline-block;
       background: #ff7043;
@@ -104,7 +144,6 @@
       transition: opacity 1s ease, transform 1s ease;
     }
 
-    /* Clase que se activa al hacer scroll */
     .visible {
       opacity: 1 !important;
       transform: translateY(0) !important;
@@ -162,7 +201,6 @@
       font-weight: bold;
     }
 
-    /* Testimonios */
     .testimonio-section {
       background: #ffe082;
       color: #3d3d3d;
@@ -173,7 +211,6 @@
       box-shadow: inset 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -192,10 +229,10 @@
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2.2em;
       }
-      .hero-product img {
-        max-width: 280px;
+      header h2 {
+        font-size: 1.1em;
       }
     }
   </style>
@@ -203,8 +240,8 @@
 <body>
 
   <header>
-    <h1>¡La Solución que SÍ funciona!</h1>
-    <h1>Tónico Essentúa: Nutrición y Crecimiento Capilar Avanzado</h1>
+    <h1>✨ ¡Transforma tu cabello desde la raíz! ✨</h1>
+    <h2>Descubre el poder natural de <strong>Essentúa</strong> — un tónico que revitaliza, fortalece y despierta la belleza real de tu cabello.</h2>
   </header>
 
   <section class="hero-section">
@@ -219,7 +256,6 @@
     <p style="color:#4d4d4d;font-size:0.9em;font-weight:600;margin-top:10px;">🚚 Envío GRATIS a todo el país</p>
   </section>
 
-  <!-- Sección con animación -->
   <section class="empaque-section" id="empaque">
     <h2>Presentación Premium</h2>
     <img src="empaque.jpg" alt="Empaque del Tónico Essentúa">
@@ -252,14 +288,12 @@
   </footer>
 
   <script>
-    // Animación al hacer scroll
     const targets = document.querySelectorAll('.empaque-section img, .empaque-section h2, .empaque-section p');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.3 });
-
     targets.forEach(el => observer.observe(el));
   </script>
 
