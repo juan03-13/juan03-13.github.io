@@ -31,7 +31,7 @@
       margin-bottom: 10px;
     }
 
-    /* Sección hero */
+    /* Sección principal */
     .hero-section {
       text-align: center;
       padding: 40px 20px;
@@ -77,19 +77,53 @@
       transform: scale(1.05);
     }
 
-    /* Video */
-    .video-section {
+    /* Sección empaque */
+    .empaque-section {
       text-align: center;
       background: #fff8e1;
-      padding: 50px 20px;
+      padding: 60px 20px;
+      overflow: hidden;
     }
 
-    .video-section video {
-      width: 100%;
-      max-width: 360px;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    .empaque-section img {
+      width: 85%;
+      max-width: 340px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      margin-bottom: 25px;
       border: 3px solid #fff;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .empaque-section h2,
+    .empaque-section p {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    /* Clase que se activa al hacer scroll */
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .empaque-section h2 {
+      color: #ff7043;
+      font-size: 2em;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .empaque-section p {
+      max-width: 550px;
+      margin: 0 auto;
+      color: #4d4d4d;
+      font-size: 1.05em;
+      line-height: 1.6;
+      font-weight: 500;
     }
 
     /* Beneficios */
@@ -185,12 +219,14 @@
     <p style="color:#4d4d4d;font-size:0.9em;font-weight:600;margin-top:10px;">🚚 Envío GRATIS a todo el país</p>
   </section>
 
-  <section class="video-section">
-    <p style="font-size:1.1em;font-weight:600;color:#3d3d3d;margin-bottom:15px;">Mira el video y conoce su poder</p>
-    <video controls>
-      <source src="https://raw.githubusercontent.com/usuario/repositorio/main/video-tonico.mp4" type="video/mp4">
-      Tu navegador no soporta este formato de video.
-    </video>
+  <!-- Sección con animación -->
+  <section class="empaque-section" id="empaque">
+    <h2>Presentación Premium</h2>
+    <img src="empaque.jpg" alt="Empaque del Tónico Essentúa">
+    <p>La presentación de <strong>Essentúa</strong> refleja su esencia natural y su poder restaurador.  
+      Cada frasco está diseñado con elegancia y practicidad para conservar intactas las propiedades del tónico.  
+      Desde el primer uso, notarás cómo tu cabello recupera su vitalidad, suavidad y brillo natural.  
+      <strong>Una experiencia de cuidado real</strong> que transforma tu cabello y tu confianza.</p>
   </section>
 
   <section class="beneficios">
@@ -214,6 +250,18 @@
     <p>Essentúa © 2025 - Producto 100% natural para tu cabello y barba</p>
     <p><a href="/privacy-policy">Política de Privacidad</a> | <a href="/terms">Términos y Condiciones</a></p>
   </footer>
+
+  <script>
+    // Animación al hacer scroll
+    const targets = document.querySelectorAll('.empaque-section img, .empaque-section h2, .empaque-section p');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.3 });
+
+    targets.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
