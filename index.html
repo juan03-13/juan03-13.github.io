@@ -17,21 +17,20 @@
     /* Encabezado */
     header {
       text-align: center;
-      padding: 70px 20px 50px;
+      padding: 60px 20px 40px;
       background: rgba(255, 183, 77, 0.9);
       color: #3d3d3d;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       backdrop-filter: blur(4px);
     }
 
     header h1 {
-      font-size: 2.6em;
-      font-weight: 800;
+      font-size: 2.4em;
+      font-weight: 700;
       color: #2a2a2a;
       margin-bottom: 10px;
-      letter-spacing: 0.5px;
     }
 
     header p {
@@ -43,11 +42,11 @@
       line-height: 1.6em;
     }
 
-    /* Hero */
+    /* Sección hero */
     .hero-section {
       text-align: center;
       padding: 50px 20px;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       margin-top: -20px;
     }
 
@@ -55,7 +54,7 @@
       width: 90%;
       max-width: 320px;
       height: auto;
-      margin: 0 auto 25px;
+      margin: 0 auto 20px;
       display: block;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -64,13 +63,14 @@
     .hero-info {
       color: #4d4d4d;
       background: rgba(255, 255, 255, 0.8);
-      padding: 14px 20px;
+      padding: 12px 20px;
       border-radius: 12px;
       font-weight: 500;
       margin: 15px auto;
       max-width: 85%;
     }
 
+    /* Botón */
     .btn-whatsapp {
       display: inline-block;
       background: #ff7043;
@@ -89,7 +89,7 @@
       transform: scale(1.05);
     }
 
-    /* Sección del empaque */
+    /* Empaque */
     .empaque-section {
       text-align: center;
       padding: 70px 20px;
@@ -112,7 +112,43 @@
       color: #3c3c3c;
     }
 
-    /* Beneficios profesionales */
+    /* Beneficios */
+    .beneficios {
+      background: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .beneficios h2 {
+      color: #ff5722;
+      font-size: 2em;
+      margin-bottom: 25px;
+    }
+
+    .beneficios ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .beneficios li {
+      font-size: 1.1em;
+      padding: 10px 0 10px 35px;
+      position: relative;
+      border-bottom: 1px dashed #eee;
+    }
+
+    .beneficios li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ff7043;
+      font-weight: bold;
+    }
+
+    /* Beneficios avanzados */
     .beneficios-extra {
       background-color: rgba(255, 235, 205, 0.9);
       padding: 60px 20px;
@@ -186,7 +222,7 @@
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2.1em;
+        font-size: 2em;
       }
       .hero-product img {
         max-width: 280px;
@@ -198,7 +234,7 @@
 
   <header>
     <h1>Essentúa — El poder natural del guásimo</h1>
-    <p>Una fórmula avanzada de origen natural que combina el extracto puro de <strong>guásimo</strong> con agentes activos que fortalecen, revitalizan y estimulan el crecimiento del cabello, la barba y las cejas.</p>
+    <p>Una fórmula con extractos botánicos que estimulan el crecimiento y fortalecen cada hebra desde la raíz. Ideal para cabello, barba y cejas, restaurando su color, grosor y vitalidad.</p>
   </header>
 
   <section class="hero-section">
@@ -206,7 +242,7 @@
       <img src="producto.jpg" alt="Tónico Essentúa Producto Principal">
     </div>
     <div class="hero-info">
-      <p><strong>Resultados visibles en pocas semanas.</strong> Fortalece, revitaliza y estimula el crecimiento desde la raíz.</p>
+      <p><strong>Resultados visibles en pocas semanas.</strong> Fortalece, revitaliza y estimula el crecimiento natural.</p>
     </div>
     <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico"
        target="_blank" class="btn-whatsapp">¡PIDE HOY POR $30.000 COP!</a>
@@ -215,26 +251,26 @@
 
   <section class="empaque-section">
     <img src="empaque.jpg" alt="Presentación del Tónico Essentúa">
-    <p>Su empaque elegante y práctico refleja la pureza del producto. Cada frasco de Essentúa encierra la fuerza ancestral del guásimo, un extracto que devuelve vitalidad y estructura al folículo capilar, ofreciendo resultados naturales y duraderos.</p>
+    <p>Su presentación elegante refleja pureza y calidad. Cada frasco de Essentúa contiene el poder ancestral del <strong>guásimo</strong>, reconocido por revitalizar el cuero cabelludo, fortalecer el folículo y estimular el crecimiento del cabello y vello facial de manera natural.</p>
   </section>
 
   <section class="beneficios-extra">
     <div class="beneficios-card">
-      <h2>Beneficios comprobados del extracto de guásimo</h2>
+      <h2>Beneficios del extracto de guásimo</h2>
       <ul>
-        <li>Fortalece el folículo capilar y reduce la caída del cabello.</li>
-        <li>Estimula el crecimiento en cabello, barba y cejas.</li>
-        <li>Oscurece naturalmente el vello, aportando color y vitalidad.</li>
-        <li>Favorece la densidad, grosor y resistencia del cabello.</li>
-        <li>Brinda brillo, suavidad y una textura más saludable.</li>
-        <li>Actúa como antioxidante y protector del cuero cabelludo.</li>
-        <li>Ideal para quienes buscan una solución natural sin residuos grasos.</li>
+        <li>Fortalece el folículo capilar y disminuye la caída.</li>
+        <li>Estimula el crecimiento del cabello, barba y cejas.</li>
+        <li>Oscurece naturalmente el vello, devolviendo su color original.</li>
+        <li>Incrementa la densidad y grosor capilar.</li>
+        <li>Brinda brillo, suavidad y textura sedosa.</li>
+        <li>Nutre profundamente sin dejar residuos grasos.</li>
+        <li>Favorece la regeneración del cuero cabelludo y su equilibrio natural.</li>
       </ul>
     </div>
   </section>
 
   <section class="testimonio-section">
-    <p>"Mi cabello era débil y se caía con facilidad. Con Essentúa, recuperé su fuerza, brillo y noté nuevos brotes en pocas semanas."</p>
+    <p>"Mi cabello era débil y se caía, ahora luce más fuerte, con brillo y vitalidad. Noté el cambio desde el primer mes con Essentúa."</p>
   </section>
 
   <footer>
