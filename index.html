@@ -1,196 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tratamiento Capilar - Fuerza Ancestral</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essentúa - Tónico Natural Capilar</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
     body {
-      background: url('fondo.png') no-repeat center center fixed;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('fondo.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
-      animation: fadeIn 1.2s ease-in forwards;
+      color: #2b2b2b;
+      box-sizing: border-box;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    header, .hero, .seccion-empaque, footer {
-      opacity: 0;
-      animation: fadeIn 1.2s ease-in forwards;
-    }
-
-    header { animation-delay: 0.2s; }
-    .hero { animation-delay: 0.5s; }
-    .seccion-empaque { animation-delay: 0.8s; }
-    footer { animation-delay: 1s; }
-
+    /* Encabezado */
     header {
-      background-color: rgba(0, 0, 0, 0.6);
       text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 70px 20px 50px;
+      background: rgba(255, 183, 77, 0.9);
+      color: #3d3d3d;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      backdrop-filter: blur(4px);
     }
 
     header h1 {
-      font-size: 2rem;
-      color: #e8d8b8;
-      text-shadow: 2px 2px 5px #000;
-      letter-spacing: 1px;
+      font-size: 2.6em;
+      font-weight: 800;
+      color: #2a2a2a;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
     }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    header p {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #3d3d3d;
+      max-width: 700px;
+      margin: 10px auto 0;
+      line-height: 1.6em;
+    }
+
+    /* Hero */
+    .hero-section {
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.55);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 50px 20px;
+      background: rgba(255,255,255,0.9);
+      margin-top: -20px;
     }
 
-    .hero img {
-      width: 250px;
-      max-width: 90%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-      margin-bottom: 1rem;
-      animation: fadeIn 1.5s ease-in forwards;
+    .hero-product img {
+      width: 90%;
+      max-width: 320px;
+      height: auto;
+      margin: 0 auto 25px;
+      display: block;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .hero h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #f5e8c7;
+    .hero-info {
+      color: #4d4d4d;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 500;
+      margin: 15px auto;
+      max-width: 85%;
     }
 
-    .hero p {
-      font-size: 1rem;
-      max-width: 600px;
-      color: #f8f8f8;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-
-    .precio {
-      background-color: #e8d8b8;
-      color: #2d2d2d;
-      font-weight: bold;
-      font-size: 1.2rem;
-      padding: 0.7rem 1.5rem;
-      border-radius: 30px;
-      margin-bottom: 1rem;
+    .btn-whatsapp {
       display: inline-block;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .boton-whatsapp {
-      display: inline-block;
-      background-color: #25d366;
-      color: white;
+      background: #ff7043;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
-      padding: 0.9rem 1.7rem;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      transition: transform 0.3s, background-color 0.3s;
+      font-size: 1.1em;
+      transition: transform 0.25s ease, background 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    .boton-whatsapp:hover {
-      background-color: #20ba5a;
+    .btn-whatsapp:hover {
+      background: #f4511e;
       transform: scale(1.05);
     }
 
-    .seccion-empaque {
+    /* Sección del empaque */
+    .empaque-section {
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.5);
+      padding: 70px 20px;
+      background: rgba(255, 248, 225, 0.9);
     }
 
-    .seccion-empaque h3 {
-      font-size: 1.5rem;
-      color: #f5e8c7;
-      margin-bottom: 1rem;
+    .empaque-section img {
+      width: 85%;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      margin-bottom: 25px;
     }
 
-    .seccion-empaque img {
-      width: 280px;
-      max-width: 90%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-      animation: fadeIn 1.5s ease-in forwards;
+    .empaque-section p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.7em;
+      color: #3c3c3c;
     }
 
+    /* Beneficios profesionales */
+    .beneficios-extra {
+      background-color: rgba(255, 235, 205, 0.9);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .beneficios-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 25px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .beneficios-card h2 {
+      color: #ff7043;
+      font-size: 1.9em;
+      margin-bottom: 25px;
+    }
+
+    .beneficios-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .beneficios-card ul li {
+      font-size: 1.1em;
+      padding: 10px 0;
+      position: relative;
+      padding-left: 30px;
+      border-bottom: 1px dashed #ddd;
+    }
+
+    .beneficios-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ff7043;
+      font-weight: bold;
+    }
+
+    /* Testimonios */
+    .testimonio-section {
+      background: #ffe082;
+      color: #3d3d3d;
+      padding: 40px 20px;
+      text-align: center;
+      font-style: italic;
+      border-top: 4px solid #ff7043;
+      box-shadow: inset 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* Footer */
     footer {
-      background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #ddd;
-      letter-spacing: 0.5px;
+      padding: 40px 20px;
+      background: #212121;
+      color: #e0e0e0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.6rem;
+        font-size: 2.1em;
       }
-      .hero h2 {
-        font-size: 1.3rem;
-      }
-      .hero p {
-        font-size: 0.95rem;
-      }
-      .precio {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-      }
-      .boton-whatsapp {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
+      .hero-product img {
+        max-width: 280px;
       }
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <h1>✨ El Poder Ancestral del Guásimo ✨</h1>
+    <h1>Essentúa — El poder natural del guásimo</h1>
+    <p>Una fórmula avanzada de origen natural que combina el extracto puro de <strong>guásimo</strong> con agentes activos que fortalecen, revitalizan y estimulan el crecimiento del cabello, la barba y las cejas.</p>
   </header>
 
-  <section class="hero">
-    <img src="producto.jpg" alt="Producto capilar">
-    <h2>Con el poder de la fuerza ancestral, ¡llegó el momento de tener el cabello que tanto sueñas!</h2>
-    <p>
-      Nuestro tratamiento capilar con extracto puro de guásimo fortalece desde la raíz, detiene la caída y despierta un brillo natural y duradero.
-    </p>
-
-    <div class="precio">$30.000 COP – Envío Gratis</div>
-
-    <a class="boton-whatsapp" href="https://wa.me/573133234154?text=Hola!%20Quiero%20comprar%20el%20tratamiento%20capilar%20de%20Gu%C3%A1simo" target="_blank">
-      💬 Comprar por WhatsApp
-    </a>
+  <section class="hero-section">
+    <div class="hero-product">
+      <img src="producto.jpg" alt="Tónico Essentúa Producto Principal">
+    </div>
+    <div class="hero-info">
+      <p><strong>Resultados visibles en pocas semanas.</strong> Fortalece, revitaliza y estimula el crecimiento desde la raíz.</p>
+    </div>
+    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico"
+       target="_blank" class="btn-whatsapp">¡PIDE HOY POR $30.000 COP!</a>
+    <p style="color:#4d4d4d;font-size:0.9em;font-weight:600;margin-top:10px;">🚚 Envío GRATIS a todo el país</p>
   </section>
 
-  <section class="seccion-empaque">
-    <h3>Presentación del Empaque</h3>
-    <img src="empaque.jpg" alt="Empaque del producto">
-    <p style="max-width: 600px; margin: 1rem auto; font-size: 1rem; color: #f3f3f3; line-height: 1.5;">
-      Una presentación elegante que refleja su pureza natural. Cada frasco conserva la esencia del guásimo ancestral, combinando tradición y calidad en un tratamiento que transformará tu cabello desde la primera aplicación.
-    </p>
+  <section class="empaque-section">
+    <img src="empaque.jpg" alt="Presentación del Tónico Essentúa">
+    <p>Su empaque elegante y práctico refleja la pureza del producto. Cada frasco de Essentúa encierra la fuerza ancestral del guásimo, un extracto que devuelve vitalidad y estructura al folículo capilar, ofreciendo resultados naturales y duraderos.</p>
+  </section>
+
+  <section class="beneficios-extra">
+    <div class="beneficios-card">
+      <h2>Beneficios comprobados del extracto de guásimo</h2>
+      <ul>
+        <li>Fortalece el folículo capilar y reduce la caída del cabello.</li>
+        <li>Estimula el crecimiento en cabello, barba y cejas.</li>
+        <li>Oscurece naturalmente el vello, aportando color y vitalidad.</li>
+        <li>Favorece la densidad, grosor y resistencia del cabello.</li>
+        <li>Brinda brillo, suavidad y una textura más saludable.</li>
+        <li>Actúa como antioxidante y protector del cuero cabelludo.</li>
+        <li>Ideal para quienes buscan una solución natural sin residuos grasos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimonio-section">
+    <p>"Mi cabello era débil y se caía con facilidad. Con Essentúa, recuperé su fuerza, brillo y noté nuevos brotes en pocas semanas."</p>
   </section>
 
   <footer>
-    © 2025 Fuerza Ancestral – Todos los derechos reservados
+    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico"
+       target="_blank" class="btn-whatsapp">¡QUIERO MI TÓNICO ESSENTÚA AHORA!</a>
+    <p>Essentúa © 2025 - Producto natural con extracto de guásimo</p>
+    <p><a href="/privacy-policy">Política de Privacidad</a> | <a href="/terms">Términos y Condiciones</a></p>
   </footer>
+
 </body>
 </html>
