@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essentúa - Tónico Natural Capilar</title>
+  <title>Essentúa - El poder ancestral en la raiz de tu cabello</title>
   <style>
     body {
       margin: 0;
@@ -13,75 +13,74 @@
       box-sizing: border-box;
     }
 
-    /* ===== NUEVO HEADER ===== */
+    /* Encabezado */
     header {
-      position: relative;
-      text-align: center;
+      background: url('fondo.jpg') center/cover no-repeat;
       color: #fff;
-      background: linear-gradient(135deg, #ff9800, #ff7043, #ff5722);
-      padding: 90px 20px 100px;
+      text-align: center;
+      padding: 120px 20px 100px;
+      position: relative;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
     }
 
     header::before {
       content: "";
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 70%);
-      animation: brillo 10s infinite linear;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.45);
       z-index: 1;
     }
 
-    @keyframes brillo {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      100% { transform: translate(0, 0) rotate(360deg); }
+    header .content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: auto;
     }
 
     header h1 {
-      position: relative;
-      z-index: 2;
-      font-size: 3em;
-      margin-bottom: 15px;
+      font-size: 2.6em;
       font-weight: 800;
-      text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
-      animation: fadeInDown 1.2s ease-out forwards;
+      margin-bottom: 15px;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.4);
     }
 
-    header h2 {
-      position: relative;
-      z-index: 2;
-      font-size: 1.4em;
-      font-weight: 500;
-      color: #fffde7;
-      max-width: 600px;
-      margin: 0 auto;
-      animation: fadeInUp 1.5s ease-out forwards;
+    header p {
+      font-size: 1.1em;
+      line-height: 1.5em;
+      color: #f8f8f8;
+      margin-bottom: 25px;
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-header {
+      background: #ff7043;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: transform 0.25s ease, background 0.25s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-header:hover {
+      background: #f4511e;
+      transform: scale(1.05);
     }
 
-    /* ===== SECCIONES RESTANTES ===== */
+    /* Sección hero */
     .hero-section {
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       background: #fff;
     }
 
     .hero-product img {
       width: 90%;
-      max-width: 320px;
+      max-width: 340px;
       height: auto;
       margin: 0 auto 20px;
       display: block;
@@ -99,6 +98,7 @@
       max-width: 85%;
     }
 
+    /* Botón general */
     .btn-whatsapp {
       display: inline-block;
       background: #ff7043;
@@ -117,52 +117,40 @@
       transform: scale(1.05);
     }
 
-    /* Sección empaque */
-    .empaque-section {
-      text-align: center;
+    /* Sección de explicación */
+    .explicacion {
       background: #fff8e1;
       padding: 60px 20px;
-      overflow: hidden;
+      text-align: center;
+      color: #3d3d3d;
     }
 
-    .empaque-section img {
-      width: 85%;
-      max-width: 340px;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      margin-bottom: 25px;
-      border: 3px solid #fff;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .empaque-section h2,
-    .empaque-section p {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-
-    .empaque-section h2 {
+    .explicacion h2 {
       color: #ff7043;
       font-size: 2em;
-      margin-bottom: 15px;
-      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .empaque-section p {
-      max-width: 550px;
-      margin: 0 auto;
-      color: #4d4d4d;
-      font-size: 1.05em;
-      line-height: 1.6;
-      font-weight: 500;
+    .explicacion p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+
+    /* Video */
+    .video-section {
+      text-align: center;
+      background: #fff;
+      padding: 50px 20px;
+    }
+
+    .video-section video {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 3px solid #fff;
     }
 
     /* Beneficios */
@@ -201,6 +189,7 @@
       font-weight: bold;
     }
 
+    /* Testimonios */
     .testimonio-section {
       background: #ffe082;
       color: #3d3d3d;
@@ -211,6 +200,7 @@
       box-shadow: inset 0 4px 12px rgba(0,0,0,0.05);
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -228,20 +218,20 @@
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2em;
-      }
-      header h2 {
-        font-size: 1.1em;
-      }
+      header h1 { font-size: 2.2em; }
+      .hero-product img { max-width: 280px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>✨ ¡Transforma tu cabello desde la raíz! ✨</h1>
-    <h2>Descubre el poder natural de <strong>Essentúa</strong> — un tónico que revitaliza, fortalece y despierta la belleza real de tu cabello.</h2>
+    <div class="content">
+      <h1>🌿 El Poder Ancestral del Guásimo</h1>
+      <p>Fortalece tu cabello y barba desde la raíz.  
+      Con extracto natural que detiene la caída y estimula el crecimiento.</p>
+      <a href="https://wa.me/573133234154?text=Hola,%20quiero%20comprar%20el%20Tónico%20Essentúa%20🌿" class="btn-header">¡QUIERO EL MÍO!</a>
+    </div>
   </header>
 
   <section class="hero-section">
@@ -249,53 +239,47 @@
       <img src="producto.jpg" alt="Tónico Essentúa Producto Principal">
     </div>
     <div class="hero-info">
-      <p><strong>Resultados visibles en pocas semanas.</strong> Fortalece, revitaliza y estimula el crecimiento.</p>
+      <p><strong>Resultados visibles en pocas semanas.</strong> Fortalece, revitaliza y estimula el crecimiento natural.</p>
     </div>
-    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico"
-       target="_blank" class="btn-whatsapp">¡PIDE HOY POR $30.000 COP!</a>
+    <a href="https://wa.me/573133234154?text=Hola,%20quiero%20comprar%20el%20Tónico%20Essentúa%20🌿" target="_blank" class="btn-whatsapp">¡PIDE HOY POR $30.000 COP!</a>
     <p style="color:#4d4d4d;font-size:0.9em;font-weight:600;margin-top:10px;">🚚 Envío GRATIS a todo el país</p>
   </section>
 
-  <section class="empaque-section" id="empaque">
-    <h2>Presentación Premium</h2>
-    <img src="empaque.jpg" alt="Empaque del Tónico Essentúa">
-    <p>La presentación de <strong>Essentúa</strong> refleja su esencia natural y su poder restaurador.  
-      Cada frasco está diseñado con elegancia y practicidad para conservar intactas las propiedades del tónico.  
-      Desde el primer uso, notarás cómo tu cabello recupera su vitalidad, suavidad y brillo natural.  
-      <strong>Una experiencia de cuidado real</strong> que transforma tu cabello y tu confianza.</p>
+  <section class="explicacion">
+    <h2>La solución natural a la caída del cabello</h2>
+    <p>El extracto del <strong>Guásimo</strong> ha sido utilizado desde generaciones por sus propiedades regeneradoras.  
+    Su fórmula natural penetra el cuero cabelludo, <strong>fortalece los folículos</strong> y estimula el crecimiento capilar y de la barba.  
+    Disminuye la caída, revitaliza las fibras dañadas y devuelve el brillo natural de tu cabello.</p>
+  </section>
+
+  <section class="video-section">
+    <p style="font-size:1.1em;font-weight:600;color:#3d3d3d;margin-bottom:15px;">Mira el video y conoce su poder</p>
+    <video controls>
+      <source src="https://raw.githubusercontent.com/usuario/repositorio/main/video-tonico.mp4" type="video/mp4">
+      Tu navegador no soporta este formato de video.
+    </video>
   </section>
 
   <section class="beneficios">
     <h2>¿Qué vas a notar con Essentúa?</h2>
     <ul>
-      <li><strong>Cabello más grueso</strong>, fuerte y brillante</li>
+      <li><strong>Cabello y barba más gruesos</strong>, fuertes y brillantes</li>
       <li><strong>Detiene la caída</strong> y previene el quiebre</li>
-      <li>Estimula el <strong>crecimiento</strong> de cabello y barba</li>
+      <li>Estimula el <strong>crecimiento natural</strong> desde la raíz</li>
       <li>Fórmula 100% natural sin residuos grasos</li>
-      <li><strong>Resultados garantizados</strong> desde la raíz</li>
+      <li><strong>Resultados garantizados</strong> desde las primeras semanas</li>
     </ul>
   </section>
 
   <section class="testimonio-section">
-    <p>"¡Mi cabello era débil y se caía, ahora es fuerte y noté los cambios en un mes!"</p>
+    <p>"Mi cabello era débil y se caía, ahora es fuerte y noté los cambios en un mes. ¡Lo recomiendo totalmente!"</p>
   </section>
 
   <footer>
-    <a href="https://wa.me/573133234154?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Essentúa%20Tónico"
-       target="_blank" class="btn-whatsapp">¡QUIERO MI TÓNICO ESSENTÚA AHORA!</a>
+    <a href="https://wa.me/573133234154?text=Hola,%20quiero%20comprar%20el%20Tónico%20Essentúa%20🌿" target="_blank" class="btn-whatsapp">¡COMPRAR AHORA!</a>
     <p>Essentúa © 2025 - Producto 100% natural para tu cabello y barba</p>
     <p><a href="/privacy-policy">Política de Privacidad</a> | <a href="/terms">Términos y Condiciones</a></p>
   </footer>
-
-  <script>
-    const targets = document.querySelectorAll('.empaque-section img, .empaque-section h2, .empaque-section p');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.3 });
-    targets.forEach(el => observer.observe(el));
-  </script>
 
 </body>
 </html>
